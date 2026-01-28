@@ -5,7 +5,7 @@ import { employeeData } from '../employeeData';
 import { Search, Star, Filter } from 'lucide-react';
 import './EmployeesDash.css';
 
-// Register ag-grid modules
+
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 const EmployeesDash = () => {
@@ -19,7 +19,7 @@ const EmployeesDash = () => {
             <div className="cell-avatar">
                 <div>
                     <div style={{ fontWeight: 500 }}>{data.firstName} {data.lastName}</div>
-                    <div style={{ fontSize: '11px', color: '#64748b', lineHeight: 1 }}>{data.email}</div>
+                    <div style={{ fontSize: '11px', color: 'var(--text-secondary)', lineHeight: 1 }}>{data.email}</div>
                 </div>
             </div>
         );
@@ -48,7 +48,7 @@ const EmployeesDash = () => {
                         strokeOpacity={i < rating ? 1 : 0.3}
                     />
                 ))}
-                <span style={{ marginLeft: '6px', color: '#64748b', fontSize: '12px' }}>
+                <span style={{ marginLeft: '6px', color: 'var(--text-secondary)', fontSize: '12px' }}>
                     {value}
                 </span>
             </div>
@@ -66,7 +66,7 @@ const EmployeesDash = () => {
                     <span key={idx} className="skill-pill">{skill}</span>
                 ))}
                 {remaining > 0 && (
-                    <span className="skill-pill" style={{ background: 'rgba(99, 102, 241, 0.5)', color: '#6366f1' }}>
+                    <span className="skill-pill" style={{ background: 'var(--primary-glow)', color: 'var(--primary)' }}>
                         +{remaining}
                     </span>
                 )}
@@ -154,7 +154,7 @@ const EmployeesDash = () => {
             <div className="grid-section">
                 <div className="grid-toolbar">
                     <div className="search-bar">
-                        <Search size={18} color="#64748b" />
+                        <Search size={18} color="var(--text-secondary)" />
                         <input
                             type="text"
                             placeholder="Search..."
